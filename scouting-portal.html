@@ -2755,7 +2755,7 @@ function PlayerReport({ phase = "open", onClose }) {
   const [dragIdx, setDragIdx] = useState(null); // which keyline is being dragged (0 or 1)
   const rowRef = useRef(null);
   const videoRef = useRef(null);
-  const LOCAL_VIDEO = encodeURI("Screen Recording 2026-06-18 120510.mp4");
+  const LOCAL_VIDEO = encodeURI("samplevideo.mp4");
 
   useEffect(() => {
     if (dragIdx === null) return;
@@ -3431,7 +3431,7 @@ function PlayerDetail({ playerId, onBack, onNavigate, onOpenReport }) {
   // Reset any active search when switching tabs so results stay scoped.
   useEffect(() => { setText(""); setAiState("idle"); setAiResult(null); setAiQuery(""); }, [tab]);
   const videoRef = useRef(null);
-  const LOCAL_VIDEO = encodeURI("Screen Recording 2026-06-18 120510.mp4");
+  const LOCAL_VIDEO = encodeURI("samplevideo.mp4");
   const activeMoment = clips.find((m) => m.id === activeClip) || clips[0] || null;
 
   // Seek the inline player to the selected clip's start.
